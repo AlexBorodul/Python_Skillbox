@@ -35,24 +35,24 @@ class Transport():
 
     @property
     def transport_coordinates(self) -> tuple:
-        return self.coordinates
+        return self.__coordinates
 
     @transport_coordinates.setter
     def transport_coordinates(self, coordinates):
         if type(coordinates) is not tuple:
             raise Exception("Введено значение неверного типа")
-        self.coordinates = coordinates
+        self.__coordinates = coordinates
 
     @property
     def transport_speed(self) -> int:
-        return self.speed
+        return self.__speed
 
     @transport_speed.setter
     def transport_speed(self, speed):
         if type(speed) is not int:
             raise Exception("Введено значение неверного типа")
         if speed < 0: raise Exception("Введено значение меньше нуля")
-        self.__coordinates = coordinates
+        self.__speed = speed
 
     @property
     def transport_year(self) -> int:
